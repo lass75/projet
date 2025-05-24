@@ -1,5 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton, QTextEdit
 from core.nmap_module import run_nmap_scan
+#importation bibliothèque nmap
+
 
 class NmapTab(QWidget):
     def __init__(self):
