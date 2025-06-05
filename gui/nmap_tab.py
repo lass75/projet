@@ -1,7 +1,6 @@
+# gui/nmap_tab.py
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton, QTextEdit
 from core.nmap_module import run_nmap_scan
-#importation bibliothèque nmap
-
 
 class NmapTab(QWidget):
     def __init__(self):
@@ -15,7 +14,7 @@ class NmapTab(QWidget):
         self.target_input = QLineEdit()
         layout.addWidget(self.target_input)
 
-        self.scan_button = QPushButton("Lancer le scan")
+        self.scan_button = QPushButton("Lancer le scan Nmap")
         self.scan_button.clicked.connect(self.start_scan)
         layout.addWidget(self.scan_button)
 
