@@ -5,7 +5,11 @@ import sys
 from gui.nmap_tab import NmapTab
 from gui.sqlmap_tab import SQLmapTab
 from gui.zap_tab import ZapTab
+from gui.metasploit_tab import MetasploitTab
+from gui.hydra_tab import HydraTab
+from gui.burp_tab import BurpTab
 # à compléter avec les autres outils
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -18,7 +22,10 @@ class MainWindow(QMainWindow):
         # Ajouter les onglets
         self.tabs.addTab(NmapTab(), "Nmap")
         self.tabs.addTab(SQLmapTab(), "SQLMap")
+        self.tabs.addTab(HydraTab(), "Hydra")
         self.tabs.addTab(ZapTab(), "OWASP ZAP")
+        self.tabs.addTab(MetasploitTab(), "Metasploit")
+        self.tabs.addTab(BurpTab(),"Burpsuite")
         # Ajouter les autres onglets ici
 
 if __name__ == "__main__":

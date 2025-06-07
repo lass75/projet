@@ -1,10 +1,11 @@
-import sys
-from PyQt5.QtWidgets import QApplication
-from gui.metasploit_tab import MetasploitTab
+from core.nessus_module import start_nessus_scan
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MetasploitTab()
-    window.show()
-    sys.exit(app.exec())
-
+    cible = input("Entrez la cible Nessus à scanner (ex: 192.168.1.1): ").strip()
+    if not cible:
+        print("Erreur : cible vide")
+    else:
+        print("Lancement du scan Nessus...")
+        res = start_nessus_scan(cible)
+        print(res)
+192
