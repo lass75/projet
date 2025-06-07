@@ -3,7 +3,7 @@ import subprocess
 
 def run_nmap_scan(target):
     try:
-        cmd = ["nmap", "-sV", target]  # -sV pour détecter les services
+        cmd = ["nmap", "-sV", "-vv", target]  # -sV pour détecter les services
         result = subprocess.run(cmd, capture_output=True, text=True)
         return result.stdout
     except Exception as e:

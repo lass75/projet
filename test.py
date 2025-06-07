@@ -1,11 +1,10 @@
-from core.zap_module import start_zap_scan
+import sys
+from PyQt5.QtWidgets import QApplication
+from gui.metasploit_tab import MetasploitTab
 
 if __name__ == "__main__":
-    target_url = input("Entrez l'URL cible à scanner avec OWASP ZAP : ").strip()
-    if not target_url:
-        print("Erreur : URL vide.")
-    else:
-        print("Lancement du scan...")
-        result = start_zap_scan(target_url)
-        print("Résultat du scan :\n")
-        print(result)
+    app = QApplication(sys.argv)
+    window = MetasploitTab()
+    window.show()
+    sys.exit(app.exec())
+
