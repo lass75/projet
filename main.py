@@ -8,6 +8,8 @@ from gui.zap_tab import ZapTab
 from gui.metasploit_tab import MetasploitTab
 from gui.hydra_tab import HydraTab
 from gui.burp_tab import BurpTab
+from gui.nessus_tab import NessusTab
+from gui.john_tab import JohnTab
 # à compléter avec les autres outils
 
 
@@ -26,6 +28,8 @@ class MainWindow(QMainWindow):
         self.tabs.addTab(ZapTab(), "OWASP ZAP")
         self.tabs.addTab(MetasploitTab(), "Metasploit")
         self.tabs.addTab(BurpTab(),"Burpsuite")
+        self.tabs.addTab(NessusTab(),"Nessus")
+        self.tabs.addTab(JohnTab(),"John The Ripper")
         # Ajouter les autres onglets ici
 
 if __name__ == "__main__":
