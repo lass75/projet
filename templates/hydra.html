@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hydra Scan</title>
+</head>
+<body>
+    <h1>Scan Hydra</h1>
+    <form method="POST">
+        <label for="target">Cible (IP ou domaine) :</label>
+        <input type="text" id="target" name="target" required /><br/>
+
+        <label for="username">Nom d'utilisateur :</label>
+        <input type="text" id="username" name="username" required /><br/>
+
+        <label for="password_file">Fichier de mots de passe :</label>
+        <input type="text" id="password_file" name="password_file" required /><br/>
+
+        <label for="service">Service (ex: ssh, ftp) :</label>
+        <input type="text" id="service" name="service" required /><br/>
+
+        <button type="submit">Lancer le scan</button>
+    </form>
+
+    {% if result %}
+    <h2>Résultat :</h2>
+    <pre>{{ result }}</pre>
+    {% endif %}
+
+    <p><a href="/">Retour à l'accueil</a></p>
+</body>
+</html>

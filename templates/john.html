@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>John the Ripper</title>
+</head>
+<body>
+    <h1>John the Ripper</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="hash_file">Fichier de hachage :</label>
+        <input type="text" name="hash_file" placeholder="chemin/vers/le/fichier.txt" required>
+        <br><br>
+        <input type="submit" value="Lancer l'attaque">
+    </form>
+
+    {% if result %}
+        <h2>Résultat :</h2>
+        <pre>{{ result }}</pre>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Retour à l'accueil</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Metasploit Exploit</title>
+</head>
+<body>
+    <h1>Exploitation Metasploit</h1>
+    <form method="POST">
+        <label for="rc_path">Chemin du fichier resource (.rc) :</label>
+        <input type="text" id="rc_path" name="rc_path" required />
+        <button type="submit">Lancer l'exploitation</button>
+    </form>
+
+    {% if result %}
+    <h2>Résultat :</h2>
+    <pre>{{ result }}</pre>
+    {% endif %}
+
+    <p><a href="/">Retour à l'accueil</a></p>
+</body>
+</html>

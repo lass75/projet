@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>SQLMap Scan</title>
+</head>
+<body>
+    <h1>Scan SQLMap</h1>
+    <form method="POST">
+        <label for="url">URL cible :</label>
+        <input type="text" id="url" name="url" required />
+        <button type="submit">Lancer le scan</button>
+    </form>
+
+    {% if result %}
+    <h2>Résultat :</h2>
+    <pre>{{ result }}</pre>
+    {% endif %}
+
+    <p><a href="/">Retour à l'accueil</a></p>
+</body>
+</html>

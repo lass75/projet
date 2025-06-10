@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sécurité Réseau</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Outils de Sécurité Réseau</h1>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="/nmap">Nmap</a>
+            <a href="/hydra">Hydra</a>
+            <a href="/john">John</a>
+            <a href="/zap">ZAP</a>
+            <a href="/metasploit">Metasploit</a>
+            <a href="/nikto">Nikto</a>
+            <a href="/nessus">Nessus</a>
+            <a href="/burp">Burp Suite</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <p><a href="{{ url_for('logout') }}">Déconnexion</a></p>
+</body>
+</html>

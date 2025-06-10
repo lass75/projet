@@ -1,11 +1,11 @@
-from core.nessus_module import start_nessus_scan
+from core.nikto_module import run_nikto_scan
 
 if __name__ == "__main__":
-    cible = input("Entrez la cible Nessus à scanner (ex: 192.168.1.1): ").strip()
-    if not cible:
-        print("Erreur : cible vide")
+    target = input("Entrez la cible à scanner avec Nikto (ex: http://127.0.0.1) : ").strip()
+    if not target:
+        print("Erreur : cible vide.")
     else:
-        print("Lancement du scan Nessus...")
-        res = start_nessus_scan(cible)
-        print(res)
-192
+        print("Lancement du scan Nikto...")
+        result = run_nikto_scan(target)
+        print("\nRésultat du scan :\n")
+        print(result)

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nessus</title>
+</head>
+<body>
+    <h1>Scanner avec Nessus</h1>
+    <form method="POST">
+        <label for="target">Cible :</label>
+        <input type="text" name="target" placeholder="192.168.1.1" required>
+        <br><br>
+        <input type="submit" value="Lancer le scan Nessus">
+    </form>
+
+    {% if result %}
+        <h2>Résultat :</h2>
+        <pre>{{ result }}</pre>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Retour à l'accueil</a>
+</body>
+</html>

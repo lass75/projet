@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Nmap Scan</title>
+</head>
+<body>
+    <h1>Scan Nmap</h1>
+    <form method="POST">
+        <label for="target">Cible (IP ou domaine) :</label>
+        <input type="text" id="target" name="target" required />
+        <button type="submit">Lancer le scan</button>
+    </form>
+
+    {% if result %}
+    <h2>Résultat :</h2>
+    <pre>{{ result }}</pre>
+    {% endif %}
+
+    <p><a href="/">Retour à l'accueil</a></p>
+</body>
+</html>
